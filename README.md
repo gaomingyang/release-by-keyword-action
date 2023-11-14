@@ -37,3 +37,7 @@ jobs:
 需要在当前代码库的setting中，找到Code and automation -> Actions->General.页面底部，勾选read and write,
 勾选allow git hub actions to create and approve pull requests.
 然后save
+
+
+后面可以扩展支持：
+手动传入tag_name

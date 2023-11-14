@@ -30,9 +30,13 @@ then
     # do something
     # echo "Found keyword."
 
+    TAG_NAME="v$(date +'%Y%m%d')_$(date +'%s')"
+
+    # echo "Generated tag_name: $TAG_NAME"
+
     VERSION=$(date +%F-%s)
 
-    DATA="$(printf '{"tag_name":"v%s",' $VERSION)"
+    DATA="$(printf '{"tag_name":"v%s",' $TAG_NAME)"
     DATA="${DATA} $(printf '"target_commitish":"master",')"
     DATA="${DATA} $(printf '"name":"v%s",' $VERSION)"
     DATA="${DATA} $(printf '"body":"Automated release based on keyword: %s",' "$*")"
