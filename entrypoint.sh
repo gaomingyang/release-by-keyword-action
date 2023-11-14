@@ -30,7 +30,7 @@ then
     # do something
     # echo "Found keyword."
 
-    VERSION=$(date +%F.%s)
+    VERSION=$(date +%F-%s)
 
     DATA="$(printf '{"tag_name":"v%s",' $VERSION)"
     DATA="${DATA} $(printf '"target_commitish":"master",')"
