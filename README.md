@@ -28,3 +28,12 @@ jobs:
       with:
         args: 'RELEASE'
 ```
+
+如果提示：
+{
+"message": "Resource not accessible by integration",
+"documentation_url": "https://docs.github.com/rest/releases/releases#create-a-release"
+}
+需要在当前代码库的setting中，找到Code and automation -> Actions->General.页面底部，勾选read and write,
+勾选allow git hub actions to create and approve pull requests.
+然后save
