@@ -34,11 +34,11 @@ then
 
     # echo "Generated tag_name: $TAG_NAME"
 
-    VERSION=$(date +%F-%s)
+    # VERSION=$(date +%F-%s)
 
-    DATA="$(printf '{"tag_name":"v%s",' $TAG_NAME)"
-    DATA="${DATA} $(printf '"target_commitish":"master",')"
-    DATA="${DATA} $(printf '"name":"v%s",' $VERSION)"
+    DATA="$(printf '{"tag_name":"%s",' $TAG_NAME)"
+    DATA="${DATA} $(printf '"target_commitish":"main",')" #分支名main
+    DATA="${DATA} $(printf '"name":"%s",' $TAG_NAME)"
     DATA="${DATA} $(printf '"body":"Automated release based on keyword: %s",' "$*")"
     DATA="${DATA} $(printf '"draft":false, "prerelease":false}')"
 
