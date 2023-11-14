@@ -44,7 +44,7 @@ then
     then
         echo "## [TESTING] Keyword was found but no release was created."
     else
-        curl -H "Authorization: ${GITHUB_TOKEN}" -H "Content-Type: application/json" -X POST ${URL} -d ${DATA}
+        curl -X POST -H "Authorization:Bearer ${GITHUB_TOKEN}" -H "Content-Type: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" ${URL} -d ${DATA}
     fi
 
 # otherwise
