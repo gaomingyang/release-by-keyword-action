@@ -31,10 +31,7 @@ then
     # echo "Found keyword."
 
     # TAG_NAME="v$(date +'%Y%m%d')_$(date +'%s')"
-
-    # echo "Generated tag_name: $TAG_NAME"
-
-    VERSION="v$(date +%F-%s)"
+    TAG_NAME="v$(date +%F-%s)"
 
     DATA="$(printf '{"tag_name":"%s",' $TAG_NAME)"
     DATA="${DATA} $(printf '"target_commitish":"main",')" #分支名main
